@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import "flowbite/dist/flowbite.css"; */
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: #f7f4ed;
+    border-radius: 10px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #e0cbcb;
+    border-radius: 10px;
+    border: 2px solid #f6f7ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+  }
+}
+.SamplePrevArrow {
+    display: block;
+    background: green !important;
+  }
+  
+  @media (max-width: 712px) {
+    .SamplePrevArrow {
+      display: none !important;
+    }
+  }
