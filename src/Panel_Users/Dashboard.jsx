@@ -2067,7 +2067,7 @@ export default function Dashboard_user() {
       </>
     );
   }
-  // function Verification() {
+ 
   //   const [image, setImage] = useState();
   //   const [image2, setImage2] = useState();
 
