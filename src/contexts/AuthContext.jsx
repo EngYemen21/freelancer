@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
 	};
 	// csrf token generation for guest methods
 	const csrfToken = async () => {
-		await axios.get('https://freelancer-backend-production-ec21.up.railway.app/8000/sanctum/csrf-cookie');
+		await axios.get('https://freelancer-backend-production-ec21.up.railway.app/sanctum/csrf-cookie');
 	  		return true;
 	};
 
