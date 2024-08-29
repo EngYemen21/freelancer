@@ -6,7 +6,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useAuth } from '../../contexts/AuthContext'; 
 // import { Navigate } from 'react-router-dom';
 export default function Register() {
-	const { setUser } = useAuth();
+	// const { setUser } = useAuth();
+	const { setUser, csrfToken } = useAuth();
 	const [captchaToken, setCaptchaToken] = useState('');
 	const [message, setMessage] = useState('');
 	const [nameError, setNameError] = React.useState('');
@@ -42,9 +43,10 @@ export default function Register() {
 		};
 		
 		try {
+			await csrfToken();
 			const resp = await axios.post('/register', body);
 			if (resp.status === 200) {
-				// setUser(resp.data.user);
+				setUser(resp.data.user);
 				// if(resp.data.user.role)
 				// 	{
 						

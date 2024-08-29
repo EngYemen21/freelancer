@@ -3,8 +3,8 @@ import Axios from 'axios';
 const axios = Axios.create({
 	baseURL: "https://freelancer-backend-production-ec21.up.railway.app/api",
 	withCredentials: true,
-	xsrfCookieName:'XSRF-TOKEN',
-		xsrfHeaderName:'X-XSRF-TOKEN',
+	// xsrfCookieName:'XSRF-TOKEN',
+	// 	xsrfHeaderName:'X-XSRF-TOKEN',
 	
 	headers: {
 		"Content-Type": "multipart/form-data",
